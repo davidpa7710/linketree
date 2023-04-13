@@ -16,7 +16,9 @@ function handleClick(event) {
         }
         else if (buttonId === "btn-5") {
             window.open("mailto:davidpa7710@gmail.com?subject=Contact Request&body=Hello David, my name is [your name] and I would like to contact you for [reason for contact].%0D%0AGreetings, [your name]", "_blank");
-
+        }
+        else if (buttonId === "btn-6") {
+            window.open("https://open.spotify.com/user/12121438720?si=9d084ad869294411", "_blank");
         }
     }
 }
