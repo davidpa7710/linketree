@@ -1,23 +1,5 @@
 var container = document.querySelector('.container');
 
-grecaptcha.ready(function() {
-    container.addEventListener('submit', function(event) {
-      event.preventDefault();
-      grecaptcha.execute('6LdxmIIlAAAAAFsXpph_D7uUMmcqXPUS8TBRBGtZ ', {action: 'submit'}).then(function(token) {
-        // Add the token to the form data and submit the form
-        var formData = new FormData(container);
-        formData.append('recaptchaToken', token);
-        fetch('/submit-form', {
-          method: 'POST',
-          body: formData
-        }).then(function(response) {
-          // Handle the response from the server
-        });
-      });
-    });
-  });
-  
-
 function handleClick(event) {
     event.preventDefault();
     var button = event.target.closest('.button');
